@@ -2,14 +2,17 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 % add bulgarian support
-\usepackage[utf8]{inputenc}
-\usepackage[english,bulgarian]{babel}
-\usepackage[T2B]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[english,bulgarian]{babel}
+%\usepackage[T2B]{fontenc}
 \usepackage[a4paper, total={7.5in, 10.5in}]{geometry}
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz,lipsum,lmodern}
+
 \begin{document}
 % turn off page numbering
 \thispagestyle{empty}
-Yordan Madzhunkov
 
 \definecolor{myblue}{rgb}{0.0,0.7,1.0}
 \definecolor{mylightblue}{rgb}{0.0,0.1,1.0}
@@ -35,11 +38,37 @@ Yordan Madzhunkov
 %   \draw[mylightblue, fill=mylightblue](A)--(B)--(C)--(D)--cycle;
 %   \draw[myblue, fill=myblue] at (3.0, 0.0) rectangle (2.5cm, 3.0cm);
    \node[anchor=south west,inner sep=0] at (0.1,0.5) {\includegraphics[width=2.5cm]{../ymadzhunkov.jpg}};
-   \node[draw=none,align=left] at (6,1) {\color{white} \Large \textbf{Yordan Madzhunkov} \\ \color{white}Physicist, Software Developer};
+   \node[draw=none,align=left] at (5.8,1) {\color{white} \Large \textbf{Yordan Madzhunkov} \\ \color{white}Physicist, Software Developer};
+   \node[draw=none,align=left] at (14,2) {\color{white} \textbf{"Creativity is intelligence having fun"}\\ \color{white}  \quad \quad \quad \quad \quad \quad \quad \quad Albert Einstein};
 \end{tikzpicture}
 \end{figure}
-
-%This will be useful later.
-%\pagecolor{black}
+\noindent
+\begin{minipage}[t]{.6\textwidth}
+      \input{minipage1.tex}
+\end{minipage}% This must go next to `\end{minipage}`
+\quad
+\quad
+\fcolorbox{myblue}{myblue}{
+\begin{minipage}[t]{.42\textwidth}
+\color{white}
+\input{minipage2.tex}
+\end{minipage}
+}
+\newpage
+\thispagestyle{empty}
+\noindent
+\begin{minipage}[t]{.6\textwidth}
+   \vspace{0.1cm}
+   \input{minipage3.tex}
+\end{minipage}% This must go next to `\end{minipage}`
+\quad
+\quad
+\fcolorbox{myblue}{myblue}{
+\begin{minipage}[t]{.42\textwidth}
+\color{white}
+\input{minipage4.tex}
+\end{minipage}
+}
 
 \end{document}
+

@@ -9,5 +9,5 @@ include(UseLATEX/UseLATEX.cmake)
 # UseLATEX.cmake the contents of this file is actually included
 # in the document.
 add_latex_document(ymadzhunkov_cv.tex
-  INPUTS CMakeLists.txt
+  INPUTS CMakeLists.txt minipage1.tex minipage2.tex minipage3.tex minipage4.tex
 )
