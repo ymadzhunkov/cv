@@ -1,0 +1,33 @@
+\newcommand{\mynukekk}[5] {% draw circle divided into mynuke
+  \def\radius{#1}
+  \def\mywhite{#2}
+  \def\myblack{#3}
+  \def\nsegs{6}
+  \def\segangle{360/\nsegs}
+
+  \coordinate (A) at (#4,#5);
+
+  %draw dotted circle as guide for cutting out
+  \draw [fill=\mywhite, draw=\myblack] (A) circle (\radius * 1.4);
+  \foreach \x in {1,3,...,\nsegs} %draw alternate mynuke
+      \filldraw[fill=\myblack,draw=\myblack] ($(A) + (0,0)$) -- ($(A)+({(\x-1)*\segangle}:\radius)$) arc ({(\x-1)*\segangle}:\x*\segangle:\radius) -- cycle;
+  % draw an inner circle 
+  \draw[fill=\mywhite, draw=\mywhite] (A) circle(#1 * 0.157 * 2.0);
+  \draw[fill=\myblack, draw=\myblack] (A) circle(#1 * 0.157 );
+}
+\DeclareRobustCommand{\myskill}[2] {
+\begin{tikzpicture}
+  \draw[white] (-30mm,0) node [align=left,text width=40mm] {#1};
+  \foreach \offx in {1,2,...,#2}
+  \mynukekk{2.0mm}{myblue}{white}{-2.3 + \offx * 0.75}{0}; 
+\end{tikzpicture} 
+}
+\DeclareRobustCommand{\myjob}[6] {
+\begin{tabular}{ r p{0.78\textwidth} }
+#1 & \textbf{#2} \\
+           & #3\\
+Job        & #4\\
+Achieved   & #5\\
+           & #6\\
+\end{tabular}\\
+}

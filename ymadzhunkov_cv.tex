@@ -1,15 +1,27 @@
 \documentclass[a4paper,notitlepage,11pt]{article}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 % add bulgarian support
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
 %\usepackage[english,bulgarian]{babel}
 %\usepackage[T2B]{fontenc}
 \usepackage[a4paper, total={7.5in, 10.5in}]{geometry}
-\usepackage{lipsum}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz,lipsum,lmodern}
-
+\usepackage{mymacros}
+\usepackage[backref=true,                % 
+            hyperref=true,               % 
+            firstinits=true,             %
+            indexing=true,               %
+            url=false,                   % 
+            style=alphabetic,            %  style=debug, alphabetic
+            bibstyle=ieee,               %
+            backend=biber,               % 
+            doi=true,
+            texencoding=utf8,
+            bibencoding=utf8]{biblatex}
+\addbibresource{myPublications.bib}
 \begin{document}
 % turn off page numbering
 \thispagestyle{empty}
@@ -38,9 +50,19 @@
 %   \draw[mylightblue, fill=mylightblue](A)--(B)--(C)--(D)--cycle;
 %   \draw[myblue, fill=myblue] at (3.0, 0.0) rectangle (2.5cm, 3.0cm);
    \node[anchor=south west,inner sep=0] at (0.1,0.5) {\includegraphics[width=2.5cm]{../ymadzhunkov.jpg}};
-   \node[draw=none,align=left] at (5.8,1) {\color{white} \Large \textbf{Yordan Madzhunkov} \\ \color{white}Physicist, Software Developer};
-   \node[draw=none,align=left] at (14,2) {\color{white} \textbf{"Creativity is intelligence having fun"}\\ \color{white}  \quad \quad \quad \quad \quad \quad \quad \quad Albert Einstein};
+   \node[draw=none,align=left] at (5.8,1) {
+      \color{white}\Large \textbf{Yordan Madzhunkov}\\ 
+      \color{white}Physicist, Software Developer\\
+      \color{white}ymadzhunkov@gmail.com
+   };
+   \node[draw=none,align=left] at (14.5,2) {
+      \color{white} \large \textbf{"Creativity is intelligence having fun"}\\ 
+      \color{white}  \quad \quad \quad \quad \quad \quad \quad \quad Albert Einstein
+   };
 \end{tikzpicture}
+
+
+
 \end{figure}
 \noindent
 \begin{minipage}[t]{.6\textwidth}
@@ -64,11 +86,14 @@
 \quad
 \quad
 \fcolorbox{myblue}{myblue}{
-\begin{minipage}[t]{.42\textwidth}
+\begin{minipage}[t]{.39\textwidth}
 \color{white}
 \input{minipage4.tex}
 \end{minipage}
 }
-
+%\newpage
+%\section*{Bibliographies}
+%\nocite{*}
+%\printbibliography
 \end{document}
 
