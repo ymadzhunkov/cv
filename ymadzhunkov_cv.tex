@@ -10,6 +10,8 @@
 \usepackage[most]{tcolorbox}
 \usepackage{tikz,lipsum,lmodern}
 \usepackage{mymacros}
+\usepackage{mdwlist}
+\usepackage{enumitem}
 \usepackage[backref=true,                % 
             hyperref=true,               % 
             firstinits=true,             %
@@ -22,12 +24,31 @@
             texencoding=utf8,
             bibencoding=utf8]{biblatex}
 \addbibresource{myPublications.bib}
+%\definecolor{myblue}{rgb}{0.0,0.7,1.0}
+%\definecolor{myblack}{rgb}{0.0,0.0,0.0}
+%\definecolor{mywhite}{rgb}{1.0,1.0,1.0}
+%%%%%%%%%%%%
+% Theme 1  %
+%%%%%%%%%%%%
+\definecolor{myblue}{HTML}{31A2AC}
+\definecolor{myred}{HTML}{AF1C1C}
+%\definecolor{myred}{HTML}{8C001A} % requested by plamena
+\definecolor{mywhite}{HTML}{F0EFF0}
+\definecolor{myblack}{HTML}{2F2F28}
+
+%%%%%%%%%%%%
+% Theme 2  %
+%%%%%%%%%%%%
+%\definecolor{myblue}{HTML}{FF6600}
+%\definecolor{myred}{HTML}{000000}
+%\definecolor{mywhite}{HTML}{CCCCCC}
+%\definecolor{myblack}{HTML}{000000}
+
 \begin{document}
 % turn off page numbering
 \thispagestyle{empty}
+\pagecolor{mywhite}
 
-\definecolor{myblue}{rgb}{0.0,0.7,1.0}
-\definecolor{mylightblue}{rgb}{0.0,0.1,1.0}
 \begin{figure}[t!]
   \hspace{-2cm}
 %  \centering
@@ -49,15 +70,15 @@
    \draw[myblue, fill=myblue] (0,0.5) rectangle (2.7,3.5);
 %   \draw[mylightblue, fill=mylightblue](A)--(B)--(C)--(D)--cycle;
 %   \draw[myblue, fill=myblue] at (3.0, 0.0) rectangle (2.5cm, 3.0cm);
-   \node[anchor=south west,inner sep=0] at (0.1,0.5) {\includegraphics[width=2.5cm]{../ymadzhunkov.jpg}};
+   \node[anchor=south west,inner sep=0] at (0.1,0.5) {\includegraphics[width=2.5cm]{ymadzhunkov.jpg}};
    \node[draw=none,align=left] at (5.8,1) {
-      \color{white}\Large \textbf{Yordan Madzhunkov}\\ 
-      \color{white}Physicist, Software Developer\\
-      \color{white}ymadzhunkov@gmail.com
+      \color{mywhite}\Large \textbf{Yordan Madzhunkov}\\ 
+      \color{mywhite}Physicist, Software Developer\\
+      \color{mywhite}ymadzhunkov@gmail.com
    };
    \node[draw=none,align=left] at (14.5,2) {
-      \color{white} \large \textbf{"Creativity is intelligence having fun"}\\ 
-      \color{white}  \quad \quad \quad \quad \quad \quad \quad \quad Albert Einstein
+      \color{mywhite} \hfill \large \textbf{"Creativity is intelligence having fun"}\\ 
+      \color{mywhite} \hfill Albert Einstein
    };
 \end{tikzpicture}
 
@@ -66,13 +87,14 @@
 \end{figure}
 \noindent
 \begin{minipage}[t]{.6\textwidth}
-      \input{minipage1.tex}
+   \color{myblack}
+   \input{minipage1.tex}
 \end{minipage}% This must go next to `\end{minipage}`
 \quad
 \quad
 \fcolorbox{myblue}{myblue}{
 \begin{minipage}[t]{.39\textwidth}
-\color{white}
+\color{mywhite}
 \input{minipage2.tex}
 \end{minipage}
 }
@@ -81,13 +103,14 @@
 \noindent
 \begin{minipage}[t]{.6\textwidth}
    \vspace{0.1cm}
+   \color{myblack}
    \input{minipage3.tex}
 \end{minipage}% This must go next to `\end{minipage}`
 \quad
 \quad
 \fcolorbox{myblue}{myblue}{
 \begin{minipage}[t]{.39\textwidth}
-\color{white}
+\color{mywhite}
 \input{minipage4.tex}
 \end{minipage}
 }
