@@ -4,11 +4,10 @@
 \usetikzlibrary{calc}
 % add bulgarian support
 \usepackage[utf8]{inputenc}
-%\usepackage[english,bulgarian]{babel}
-%\usepackage[T2B]{fontenc}
+\usepackage[english,bulgarian]{babel}
+\usepackage[T2B]{fontenc}
 \usepackage[a4paper, total={7.5in, 10.5in}]{geometry}
-\usepackage[most]{tcolorbox}
-\usepackage{tikz,lipsum,lmodern}
+\usepackage{tikz,lmodern}
 \usepackage{mymacros}
 \usepackage{mdwlist}
 \usepackage{enumitem}
@@ -22,8 +21,10 @@
             backend=biber,               % 
             doi=true,
             texencoding=utf8,
-            bibencoding=utf8]{biblatex}
-\addbibresource{myPublications.bib}
+           bibencoding=utf8]{biblatex}
+%\addbibresource{myPublications.bib}
+
+
 %\definecolor{myblue}{rgb}{0.0,0.7,1.0}
 %\definecolor{myblack}{rgb}{0.0,0.0,0.0}
 %\definecolor{mywhite}{rgb}{1.0,1.0,1.0}
