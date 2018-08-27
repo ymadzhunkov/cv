@@ -86,6 +86,28 @@
    \small Gained experience: #7\\ \\
 \normalsize 
 }
+
+\DeclareRobustCommand{\myjoba}[6] {
+\myjobtitle{#1}{#2}{#3}{#4}
+   \begin{minipage}[t]{0.45\textwidth}
+      \small
+      \begin{itemize}[leftmargin=*]
+      \itemsep0pt \parskip0pt \parsep0pt
+       #5
+      \end{itemize}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.50\textwidth}
+      \small
+      \begin{itemize}[leftmargin=*]
+      \itemsep0pt \parskip0pt \parsep0pt
+      #6
+      \end{itemize}
+   \end{minipage}\\ 
+   \\
+\normalsize 
+}
+
 \DeclareRobustCommand{\myjobbb}[6] {
 \myjobtitle{#1}{#2}{#3}{#4}
    \vspace{-0.5cm}
